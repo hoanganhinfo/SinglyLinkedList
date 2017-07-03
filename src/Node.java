@@ -1,4 +1,3 @@
-
 public class Node<Integer> {
 	private Integer data;
 	private Node<Integer> next;

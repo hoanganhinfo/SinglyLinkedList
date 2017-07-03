@@ -1,19 +1,18 @@
-
 public class SinglyLinkedList {
-	private Node head;
+	private Node<Integer> head;
 	public SinglyLinkedList(){
 		
 	}
 	public void append(int value){
 		if (head == null){
-			head = new Node(value,null);
+			head = new Node<Integer>(value,null);
 		}else{
 			Node<Integer> curNode = head;
 		    while(curNode.getNext() != null){
 		    	curNode = curNode.getNext();
 		    }
 
-		    curNode.setNext(new Node(value, null));
+		    curNode.setNext(new Node<Integer>(value, null));
 		}
 	}
 	public void removeEnd(){
@@ -32,7 +31,6 @@ public class SinglyLinkedList {
 		if (head != null){
 			Node<Integer> curNode = head;
 			Node<Integer> prevNode = head;
-			Node<Integer> nextNode;
 		    while(curNode.getNext() != null){
 		    	if (curNode.getData() >= num){
 		    		prevNode.setNext(curNode.getNext());
@@ -59,10 +57,10 @@ public class SinglyLinkedList {
 		}
 		System.out.println("============================");
 	}
-	public Node getHead() {
+	public Node<Integer> getHead() {
 		return head;
 	}
-	public void setHead(Node head) {
+	public void setHead(Node<Integer> head) {
 		this.head = head;
 	}
 }
